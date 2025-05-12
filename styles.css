@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f9fb;
+    color: #222;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #4CAF50, #2E8B57);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    animation: slideDown 1s ease-in-out;
+  }
+  
+  nav {
+    margin-top: 1rem;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffd;
+  }
+  
+  section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+  }
+  
+  .project, .skills-grid div {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #4CAF50;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .project:hover, .skills-grid div:hover {
+    transform: scale(1.02);
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+  
+  .skills-grid div {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  a {
+    color: #2E8B57;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    background-color: #eee;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
